@@ -122,7 +122,7 @@ client.on('raw', async event => {
 
             for (let i = 0; i < fields.length; i++) {
                 if (member.id !== client.user.id) {
-                    const role = message.guild.roles.find(r => r.name === fields[i].value);
+                    const role = message.guild.roles.find('name', 'Verified');
 
                     if (fields[i].name === reaction.emoji.name) {
                         if (event.t === "MESSAGE_REACTION_ADD") {
